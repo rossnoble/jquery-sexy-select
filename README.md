@@ -20,7 +20,7 @@ Include `jquery`, `jquery-ui` and `jquery-sexy-select` and bind to select box
 ```html
 <script src="jquery.js"></script>
 <script src="jquery-ui.js"></script>
-<script src="jquery-sexy-select.js"></script>
+<script src="jquery.sexyselect.js"></script>
 <script>
   $(document).ready(function () {
     $('#colors').sexySelect();

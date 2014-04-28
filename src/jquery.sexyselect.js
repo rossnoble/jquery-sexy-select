@@ -12,9 +12,9 @@
   $.widget('PB.sexySelect', {
 
     options: {
-      wrapperClass: 'skinned-select',
-      selectTextClass: 'select-text',
-      optionsListClass: 'select-options',
+      wrapperClass: 'sexy-select',
+      selectTextClass: 'sexy-select-text',
+      optionsListClass: 'sexy-select-options',
       activeSelectClass: 'focused',
       activeWrapperClass: 'active-select',
       direction: 'down'

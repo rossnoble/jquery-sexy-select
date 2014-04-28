@@ -54,9 +54,9 @@ describe('Sexy Select', function () {
 
     expect($selectBox.length).toEqual(1);
     expect($selectBox.parent().attr('id')).not.toEqual('test-container');
-    expect($selectBox.parent().attr('class')).toEqual('skinned-select');
-    expect($selectBox.prev().attr('class')).toEqual('select-options');
-    expect($selectBox.prev().prev().attr('class')).toEqual('select-text');
+    expect($selectBox.parent().attr('class')).toEqual('sexy-select');
+    expect($selectBox.prev().attr('class')).toEqual('sexy-select-options');
+    expect($selectBox.prev().prev().attr('class')).toEqual('sexy-select-text');
   });
 
   it('bind to select element creates list of options that match select box options', function () {
@@ -65,8 +65,8 @@ describe('Sexy Select', function () {
     $selectBox.sexySelect();
 
     var $selectOptions = $selectBox.find('option'),
-      $widgetOptions = $selectBox.siblings('.select-options').find('li'),
-      $widgetText = $selectBox.siblings('.select-text');
+      $widgetOptions = $selectBox.siblings('.sexy-select-options').find('li'),
+      $widgetText = $selectBox.siblings('.sexy-select-text');
 
     expect( $widgetOptions.length )
       .toEqual( $selectOptions.length );
@@ -79,7 +79,7 @@ describe('Sexy Select', function () {
   it('trigger change event on source element updates active option label', function () {
     var $selectBox = $('#select-box');
     $selectBox.sexySelect();
-    var $widgetText = $selectBox.siblings('.select-text');
+    var $widgetText = $selectBox.siblings('.sexy-select-text');
 
     expect( $widgetText.text() ).toEqual('One');
     expect( $selectBox.val() ).toEqual('1');
@@ -95,8 +95,8 @@ describe('Sexy Select', function () {
 
     $selectBox.sexySelect();
 
-    var $widgetText = $selectBox.siblings('.select-text'),
-      $widgetOptions = $selectBox.siblings('.select-options').find('li'),
+    var $widgetText = $selectBox.siblings('.sexy-select-text'),
+      $widgetOptions = $selectBox.siblings('.sexy-select-options').find('li'),
       $widgetOptionsTarget = $($widgetOptions.get(2));
 
     expect( $widgetText.text() ).toEqual('One');

@@ -28,3 +28,20 @@ Include `jquery`, `jquery-ui` and `jquery-sexy-select` and bind to select box
 </script>
 ```
 
+By default this will generate the following HTML:
+
+```html
+<div class="sexy-select">
+  <div class="sexy-select-text">Red</div>
+  <ul class="sexy-select-options" style="display: none">
+    <li data-value="red" class="active">Red</li>
+    <li data-value="blue">Blue</li>
+    <li data-value="green">Green</li>
+  </ul>
+  <select id="colors" name="colors" style="display: none">
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+  </select>
+</div>
+```

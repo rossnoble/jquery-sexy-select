@@ -198,6 +198,8 @@
     },
 
     _bindTabEvents: function () {
+      var self = this;
+
       // All elements need to have the tabindex attribute set
       $('body').on('keydown', '[tabindex]', function(e) {
         

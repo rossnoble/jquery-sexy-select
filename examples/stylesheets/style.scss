@@ -1,0 +1,54 @@
+// Demo styles
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans;
+}
+
+.sexy-select {
+  $width: 200px;
+  $padding: 8px;
+
+  width: $width;
+  position: relative;
+
+  .sexy-select-text {
+    background: #EEE;
+    padding: $padding;
+    border: 1px solid #333;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .sexy-select-options {
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    width: $width;
+    max-height: 260px;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 1px solid #333;
+    box-shadow: 0 3px 6px -2px rgba(black, 0.2);
+    border-radius: 3px;
+
+    li {
+      padding: $padding;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #EEE;
+      }
+
+      &.active {
+        font-weight: bold;
+        background-color: #DDD;
+      }
+    }
+  }
+}

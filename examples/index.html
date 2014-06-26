@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Sexy Select Demo</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <script src="/src/jquery.sexyselect.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#countries').sexySelect();
+      $('#colours').sexySelect({
+        direction: 'down',
+        wrapperClass: 'unstyled'
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Sexy Select Demo</h1>
+
+  <h3>Styled example</h3>
+
+  <select id="countries">
+    <option value="">-- Select a Country --</option>
+    <option value="us">United States</option>
+    <option value="ca">Canada</option>
+    <option value="gb">United Kingdom</option>
+    <option value="br">Brazil</option>
+    <option value="jp">Japan</option>
+    <option value="eg">Egypt</option>
+    <option value="au">Australia</option>
+    <option value="fr">France</option>
+  </select>
+  
+  <h3>Unstyled example</h3>
+
+  <select id="colours">
+    <option value="">-- Select a Colour --</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
+    <option value="yellow">Yellow</option>
+    <option value="orange">Orange</option>
+  </select>
+</body>
+</html>

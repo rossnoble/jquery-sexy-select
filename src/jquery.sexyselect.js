@@ -9,7 +9,7 @@
 
   'use strict';
 
-  $.widget('PB.sexySelect', {
+  $.widget('sexy.sexySelect', {
 
     options: {
       wrapperClass: 'sexy-select',
@@ -96,8 +96,8 @@
     },
 
     _bindClickEvents: function () {
-      var self = this
-        , options = this.options;
+      var self = this,
+        options = this.options;
 
       // Open select box
       this.$selectText
@@ -121,7 +121,7 @@
             .siblings('.'+options.optionsListClass)
             .hide();
 
-          if (self.options.direction == "up" || self._reverseDirection()) {
+          if (options.direction == "up" || self._reverseDirection()) {
             self.$optionsList.addClass('direction-up');
             self.$optionsList.append(self.$optionsList.find('li.active'));
           }
@@ -145,7 +145,7 @@
       });
       
       // Trigger close when clicking outside of dropdown
-      $('html').on('click.pbDropdown', function (e) {
+      $('html').on('click.sexy', function (e) {
         if ( ! $(e.target).parents().hasClass(self.options.wrapperClass)) {
           self.$optionsList.hide();
           self.$wrapper.removeClass(self.options.activeWrapperClass);
